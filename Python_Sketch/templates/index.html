@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pencil Sketch Web App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        input[type="file"], input[type="submit"] {
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 1em;
+        }
+        img {
+            margin-top: 30px;
+            max-width: 80%;
+            height: auto;
+            border: 2px solid #444;
+        }
+    </style>
+</head>
+<body>
+    <h1>🖼️ Pencil Sketch Web App</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="photo" required>
+        <br>
+        <input type="submit" value="Generate Sketch">
+    </form>
+
+    {% if sketch_image %}
+        <h2>🎉 Your Sketch:</h2>
+        <img src="{{ url_for('static', filename='sketches/' + sketch_image) }}" alt="Sketch">
+    {% endif %}
+</body>
+</html>
