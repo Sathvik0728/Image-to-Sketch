@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Image To Sketch</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- TITLE -->
+
+        <div class="title-section">
+
+            <h1>
+                IMAGE TO <span>SKETCH</span> ✏️
+            </h1>
+
+            <p>
+                Convert Any Image Into A Pencil Sketch
+            </p>
+
+        </div>
+
+        <!-- MAIN SECTION -->
+
+        <div class="main-content">
+
+            <!-- ORIGINAL -->
+
+            <div class="card">
+
+                <div class="tag blue">
+                    ORIGINAL IMAGE
+                </div>
+
+                <img id="originalImage">
+
+            </div>
+
+            <!-- ARROW -->
+
+            <div class="arrow">
+                →
+            </div>
+
+            <!-- SKETCH -->
+
+            <div class="card">
+
+                <div class="tag green">
+                    SKETCH OUTPUT
+                </div>
+
+                <canvas id="sketchCanvas"></canvas>
+
+            </div>
+
+        </div>
+
+        <!-- BOTTOM -->
+
+        <div class="bottom-section">
+
+            <!-- SETTINGS -->
+
+            <div class="settings">
+
+                <h2>SKETCH SETTINGS</h2>
+
+                <div class="slider-group">
+
+                    <label>
+                        Sketch Intensity
+                    </label>
+
+                    <input type="range"
+                        id="intensity"
+                        min="2"
+                        max="10"
+                        value="5">
+
+                </div>
+
+            </div>
+
+            <!-- BUTTONS -->
+
+            <div class="buttons">
+
+                <label
+                    for="upload"
+                    class="upload-btn">
+
+                    UPLOAD IMAGE
+
+                </label>
+
+                <input type="file"
+                    id="upload"
+                    accept="image/*">
+
+                <button id="downloadBtn">
+                    DOWNLOAD SKETCH
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

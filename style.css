@@ -1,0 +1,332 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+    background:
+    radial-gradient(circle at top,
+    #071b44 0%,
+    #020817 55%,
+    #01040c 100%);
+    color:white;
+}
+
+/* CONTAINER */
+
+.container{
+    width:100%;
+    height:100vh;
+    padding:16px;
+    display:flex;
+    flex-direction:column;
+}
+
+/* TITLE */
+
+.title-section{
+    text-align:center;
+    margin-bottom:12px;
+}
+
+.title-section h1{
+    font-size:58px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+.title-section span{
+    color:#3399ff;
+}
+
+.title-section p{
+    margin-top:6px;
+    color:#b8b8b8;
+    font-size:21px;
+}
+
+/* MAIN SECTION */
+
+.main-content{
+    flex:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:18px;
+    min-height:0;
+}
+
+/* CARD */
+
+.card{
+    flex:1;
+    height:100%;
+    background:
+    linear-gradient(
+        145deg,
+        rgba(6,18,45,0.98),
+        rgba(3,10,25,0.98)
+    );
+
+    border-radius:24px;
+
+    padding:16px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    border:
+    1px solid rgba(255,255,255,0.07);
+
+    box-shadow:
+    0 0 25px rgba(0,102,255,0.12);
+}
+
+/* IMAGE */
+
+.card img,
+.card canvas{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    border-radius:18px;
+    background:#000;
+}
+
+/* TAG */
+
+.tag{
+    position:absolute;
+    top:14px;
+    left:14px;
+
+    padding:12px 24px;
+
+    border-radius:14px;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    z-index:5;
+
+    backdrop-filter:blur(8px);
+}
+
+.blue{
+    background:#052a60;
+    border:2px solid #3399ff;
+    color:#8ecaff;
+}
+
+.green{
+    background:#043820;
+    border:2px solid #00d26a;
+    color:#9fffd0;
+}
+
+/* ARROW */
+
+.arrow{
+    min-width:74px;
+    height:74px;
+
+    border-radius:50%;
+
+    background:
+    linear-gradient(
+        145deg,
+        #031325,
+        #071f40
+    );
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:50px;
+
+    color:#3399ff;
+
+    box-shadow:
+    0 0 22px rgba(0,102,255,0.5);
+}
+
+/* BOTTOM */
+
+.bottom-section{
+    height:120px;
+
+    margin-top:14px;
+
+    display:flex;
+
+    gap:18px;
+}
+
+/* SETTINGS */
+
+.settings,
+.buttons{
+    flex:1;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(6,18,45,0.98),
+        rgba(3,10,25,0.98)
+    );
+
+    border-radius:22px;
+
+    padding:20px;
+
+    border:
+    1px solid rgba(255,255,255,0.07);
+}
+
+/* SETTINGS TITLE */
+
+.settings h2{
+    color:#4da6ff;
+    margin-bottom:18px;
+    font-size:18px;
+}
+
+/* SLIDER */
+
+.slider-group{
+    width:100%;
+}
+
+.slider-group label{
+    display:block;
+    margin-bottom:14px;
+    font-size:18px;
+}
+
+.slider-group input{
+    width:100%;
+    cursor:pointer;
+    accent-color:#9333ea;
+}
+
+/* BUTTONS */
+
+.buttons{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:16px;
+}
+
+#upload{
+    display:none;
+}
+
+/* BUTTON STYLE */
+
+.upload-btn,
+#downloadBtn{
+    flex:1;
+
+    height:62px;
+
+    border:none;
+
+    border-radius:18px;
+
+    cursor:pointer;
+
+    font-size:19px;
+
+    font-weight:700;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    transition:0.25s;
+}
+
+/* UPLOAD */
+
+.upload-btn{
+    background:#031f12;
+    border:2px solid #00cc66;
+    color:#9effcf;
+}
+
+/* DOWNLOAD */
+
+#downloadBtn{
+    background:
+    linear-gradient(
+        145deg,
+        #0d6efd,
+        #0057d8
+    );
+
+    color:white;
+}
+
+/* HOVER */
+
+.upload-btn:hover,
+#downloadBtn:hover{
+    transform:translateY(-2px);
+}
+
+/* MOBILE */
+
+@media(max-width:1000px){
+
+    body{
+        overflow:auto;
+    }
+
+    .container{
+        height:auto;
+    }
+
+    .main-content{
+        flex-direction:column;
+    }
+
+    .bottom-section{
+        flex-direction:column;
+        height:auto;
+    }
+
+    .card{
+        height:420px;
+    }
+
+    .title-section h1{
+        font-size:40px;
+    }
+
+    .title-section p{
+        font-size:18px;
+    }
+
+    .arrow{
+        width:60px;
+        height:60px;
+        font-size:38px;
+    }
+
+    .upload-btn,
+    #downloadBtn{
+        height:58px;
+        font-size:17px;
+    }
+}
