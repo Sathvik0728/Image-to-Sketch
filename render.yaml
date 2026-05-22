@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: image-to-sketch
+    env: static
+    buildCommand: ""
+    staticPublishPath: .
